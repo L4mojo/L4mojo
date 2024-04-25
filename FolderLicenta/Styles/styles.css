@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: Hack, monospace;
+  }
+  
+  .titlusite {
+    align-self: top;
+    margin: 16px;
+    font-size: 96px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+  
+    &::before {
+      content: attr(data-item);
+      transition: all 1s ease-in-out;
+      color: #8254ff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  
+  nav {
+    margin: 25px;
+    background: #f9f9f9;
+    padding: 16px;
+    .menuItems {
+      list-style: none;
+      display: flex;
+  
+      li {
+        margin: 50px;
+  
+        a {
+          text-decoration: none;
+          color: #8f8f8f;
+          font-size: 24px;
+          font-weight: 400;
+          transition: all 0.5s ease-in-out;
+          position: relative;
+          text-transform: uppercase;
+  
+          &::before {
+            content: attr(data-item);
+            transition: 0.5s;
+            color: #8254ff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            overflow: hidden;
+          }
+  
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  /*pagina principala*/
+
+.paginaprincipala {
+    display: grid;
+    grid-template-columns: 100px 2fr 2fr 100px;
+    grid-template-rows: 100px 4fr 100px;
+    position: relative;
+    height: 1000px;
+    width: 90%;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+
+.paginasecundara {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10,1fr);
+    position: relative;
+    height: 1000px;
+    width: 90%;
+    background-color: whitesmoke;
+}
+
+.scris-pp {
+    grid-area: 2/2/3/3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 100px 100px 3fr 100px;
+    grid-template-rows: 200px 1fr 2fr 50px 1fr 100px;
+
+}
+
+.scrisprincipal{
+    grid-area: 1/3/3/4;
+    position: absolute;
+    color: #101A24;
+    font-family: "David Libre";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    justify-self: start;
+}
+
+.scrissecundar{
+    grid-area:3/3/4/4;
+    position: absolute;
+    color: #5C6574;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    justify-self: start;
+}
+
+.logouri {
+    grid-area: 5/3/6/4;
+    display: grid;
+    grid-template-columns: 100px 20px 100px 1fr;
+    grid-template-rows: 2fr;
+}
+.logofb {
+    grid-area: 1/1/-3/2;
+    width: 60px;
+    height: 60px;
+    justify-self: right;
+}
+
+.logoinsta {
+    grid-area: 1/2/-3/4;
+    width: 60px;
+    height: 60px;
+    justify-self: center;
+    top:20px;
+}
+
+.baraneagra {
+    grid-area:1/4/-3/5;
+    width: 80%;
+    height: 2px;
+    justify-self: start;
+    align-self: center;
+    
+}
